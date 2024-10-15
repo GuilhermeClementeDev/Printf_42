@@ -13,4 +13,7 @@ int	ft_printf_char(char c);
 int	ft_printf_string(char *s);
 
 int	ft_printf_number(int nb);
+
+int	ft_printf_unsigned_num(unsigned int nb);
+
 #endif

@@ -6,10 +6,12 @@ static int	ft_verify(char c,va_list args)
 
 	if (c == 'c')
 		size = ft_printf_char(va_arg(args, int));
-	if (c == 's')
+	else if (c == 's')
 		size = ft_printf_string(va_arg(args, char *));
-	if (c == 'd' || c == 'i')
+	else if (c == 'd' || c == 'i')
 		size = ft_printf_number(va_arg(args, int));
+	else if (c == 'u')
+		size = ft_printf_unsigned_num(va_arg(args, unsigned int));
 
 	return (size);
 }
