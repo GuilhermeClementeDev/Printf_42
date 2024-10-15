@@ -1,20 +1,17 @@
 done:
-✅Makefile, header
+✅Makefile, header, acertar o return das fuções
 _____________________________________
 to do:
-1- acertar o return das fuções
-2- terminar todos os tipos de variavel
-3- erros va_list
+1- terminar todos os tipos de variavel
+2- erros va_list
 
 
 ✅ %c Prints a single character.
 ✅ %s Prints a string (as defined by the common C convention).
 • %p The void * pointer argument has to be printed in hexadecimal format.
-• %d Prints a decimal (base 10) number.
-• %i Prints an integer in base 10.
+✅ %d Prints a decimal (base 10) number.
+✅ %i Prints an integer in base 10.
 • %u Prints an unsigned decimal (base 10) number.
 • %x Prints a number in hexadecimal (base 16) lowercase format.
 • %X Prints a number in hexadecimal (base 16) uppercase format.
 • %% Prints a percent sign.
-
-VASCO DA GAMA PORREAAAAAAAAAAA AAAA
