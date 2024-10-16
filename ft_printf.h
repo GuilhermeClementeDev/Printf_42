@@ -18,5 +18,5 @@ int	ft_printf_unsigned_num(unsigned int nb);
 
 int	ft_printf_hex(unsigned int nb, int c);
 
-int	ft_printf_pointer(size_t nb);
+int	ft_printf_pointer(unsigned long nb);
 #endif

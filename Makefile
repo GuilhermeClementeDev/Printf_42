@@ -22,8 +22,8 @@ all: $(NAME)
 
 makelib:
 	make -C ./libft
-	cp ./libft/$(LIBFTNAME) .
-	mv $(LIBFTNAME) $(NAME)
+	@cp ./libft/$(LIBFTNAME) .
+	@mv $(LIBFTNAME) $(NAME)
 
 $(NAME): $(OBJ) makelib
 	ar -rcs $(NAME) $(OBJ)

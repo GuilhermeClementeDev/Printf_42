@@ -1,4 +1,4 @@
-#include "lib_printf.h"
+#include "ft_printf.h"
 
 static int	get_size(int nb)
 {
@@ -22,5 +22,7 @@ static int	get_size(int nb)
 int	ft_printf_number(int nb)
 {
 	ft_putnbr_fd(nb, 1);
+	if (nb == 0)
+		return(1);
 	return(get_size(nb));
 }

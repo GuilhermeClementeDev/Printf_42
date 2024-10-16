@@ -1,4 +1,4 @@
-#include "lib_printf.h"
+#include "ft_printf.h"
 
 static int	ft_verify(char c,va_list args)
 {
@@ -20,7 +20,7 @@ static int	ft_verify(char c,va_list args)
 		size = 1;
 	}
 	if (c == 'p')
-		size = ft_printf_pointer(va_arg(args, size_t));
+		size = ft_printf_pointer(va_arg(args, unsigned long));
 	return (size);
 }
 
@@ -38,7 +38,7 @@ static int	ft_write(const char *s, va_list args)
 			size += ft_verify(s[i+1], args);
 			i += 2;
 		}
-		if (s[i])
+		if (s[i] && s[i] != '%')
 		{
 			ft_putchar_fd(s[i],1);
 			size++;

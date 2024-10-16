@@ -1,9 +1,9 @@
-#include "lib_printf.h"
+#include "ft_printf.h"
 
 static void	ft_rprint(char *s)
 {
 	int	i;
-	i = ft_strlen(s);
+	i = ft_strlen(s) - 1;
 	while (i >= 0)
 	{
 		write(1, &s[i], 1);
@@ -11,7 +11,7 @@ static void	ft_rprint(char *s)
 	}
 }
 
-static int	ft_printf_bighex(size_t nb)
+static int	ft_printf_bighex(unsigned long nb)
 {
 	unsigned int	num;
 	char			*base = "0123456789abcdef";
@@ -36,15 +36,23 @@ static int	ft_printf_bighex(size_t nb)
 		arr[i] = '\0';
 		ft_rprint(arr);
 	}
-	return (ft_strlen(arr));
+	return (i);
 }
 
-int	ft_printf_pointer(size_t nb)
+int	ft_printf_pointer(unsigned long nb)
 {
 	int	size;
 
-	size = 2;
-	ft_putstr_fd("0x",1);
-	size += ft_printf_bighex(nb);
+	if (nb == 0)
+	{
+		ft_putstr_fd("(nil)", 1);
+		return (5);
+	}
+	else
+	{
+		size = 2;
+		ft_putstr_fd("0x",1);
+		size += ft_printf_bighex(nb);
+	}
 	return (size);
 }

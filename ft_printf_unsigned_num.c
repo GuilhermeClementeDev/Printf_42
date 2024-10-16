@@ -1,4 +1,4 @@
-#include "lib_printf.h"
+#include "ft_printf.h"
 
 static int	get_num(unsigned int nb)
 {
@@ -30,5 +30,7 @@ static void	ft_positive_putnbr(unsigned int n)
 int	ft_printf_unsigned_num(unsigned int nb)
 {
 	ft_positive_putnbr(nb);
+	if (nb == 0)
+		return (1);
 	return (get_num(nb));
 }

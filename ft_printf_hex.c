@@ -1,9 +1,9 @@
-#include "lib_printf.h"
+#include "ft_printf.h"
 
 static void	ft_rprint(char *s , int c)
 {
 	int	i;
-	i = ft_strlen(s);
+	i = ft_strlen(s) - 1;
 	while (i >= 0)
 	{
 		if (c == 'X')
@@ -42,5 +42,5 @@ int ft_printf_hex(unsigned int nb, int c)
 		arr[i] = '\0';
 		ft_rprint(arr, c);
 	}
-	return (ft_strlen(arr));
+	return (i);
 }
