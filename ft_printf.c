@@ -6,15 +6,19 @@ static int	ft_verify(char c,va_list args)
 
 	if (c == 'c')
 		size = ft_printf_char(va_arg(args, int));
-	else if (c == 's')
+	if (c == 's')
 		size = ft_printf_string(va_arg(args, char *));
-	else if (c == 'd' || c == 'i')
+	if (c == 'd' || c == 'i')
 		size = ft_printf_number(va_arg(args, int));
-	else if (c == 'u')
+	if (c == 'u')
 		size = ft_printf_unsigned_num(va_arg(args, unsigned int));
-	else if (c == 'x' || c == 'X')
+	if (c == 'x' || c == 'X')
 		size = ft_printf_hex(va_arg(args, unsigned int), c);
-
+	if (c == '%')
+	{
+		ft_putchar_fd('%',1);
+		size = 1;
+	}
 	return (size);
 }
 

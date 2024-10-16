@@ -23,9 +23,14 @@ int main()
 	printf("%u\n", 10);
 	printf("%u\n", 2147483647);*/
 
-	// test %x
+	/*// test %x
 	ft_printf("MY\n");
 	ft_printf("%X\n", -78787);
 	ft_printf("ORI\n");
 	printf("%X\n", -78787);
+	*/
+
+	/*// %%
+	ft_printf ("%%\n");
+	printf ("%%\n");*/
 }
