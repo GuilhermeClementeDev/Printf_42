@@ -6,7 +6,7 @@ NAME = libftprintf.a
 LIBFTNAME = libft.a
 
 MY_SOURCES = ft_printf.c ft_printf_char.c ft_printf_string.c \
-ft_printf_number.c ft_printf_unsigned_num.c
+ft_printf_number.c ft_printf_unsigned_num.c ft_printf_hex.c \
 
 
 CFLAGS = -Wall -Wextra -Werror

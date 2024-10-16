@@ -12,6 +12,6 @@ to do:
 ✅ %d Prints a decimal (base 10) number.
 ✅ %i Prints an integer in base 10.
 ✅ %u Prints an unsigned decimal (base 10) number.
-• %x Prints a number in hexadecimal (base 16) lowercase format.
-• %X Prints a number in hexadecimal (base 16) uppercase format.
+✅ %x Prints a number in hexadecimal (base 16) lowercase format.
+✅ %X Prints a number in hexadecimal (base 16) uppercase format.
 • %% Prints a percent sign.
