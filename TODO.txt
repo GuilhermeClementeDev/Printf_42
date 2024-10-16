@@ -1,15 +1,15 @@
 done:
-✅Makefile, header, acertar o return das fuções
+✅Makefile, header, acertar o return das fuções, terminar todos os tipos de variavel
 _____________________________________
 to do:
-1- terminar todos os tipos de variavel
+1- verificar return (se ta tudo certo)
 2- erros va_list
 3- testar tamanho maximo possivel hexadecimal
-
+4- norminette
 
 ✅ %c Prints a single character.
 ✅ %s Prints a string (as defined by the common C convention).
-• %p The void * pointer argument has to be printed in hexadecimal format.
+✅ %p The void * pointer argument has to be printed in hexadecimal format.
 ✅ %d Prints a decimal (base 10) number.
 ✅ %i Prints an integer in base 10.
 ✅ %u Prints an unsigned decimal (base 10) number.

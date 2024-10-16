@@ -19,6 +19,8 @@ static int	ft_verify(char c,va_list args)
 		ft_putchar_fd('%',1);
 		size = 1;
 	}
+	if (c == 'p')
+		size = ft_printf_pointer(va_arg(args, size_t));
 	return (size);
 }
 
@@ -54,5 +56,6 @@ int	ft_printf(const char *s, ...)
 	va_list	args;
 	va_start(args, s);
 	size = ft_write(s, args);
+	va_end(args);
 	return (size);
 }

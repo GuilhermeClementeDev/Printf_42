@@ -17,4 +17,6 @@ int	ft_printf_number(int nb);
 int	ft_printf_unsigned_num(unsigned int nb);
 
 int	ft_printf_hex(unsigned int nb, int c);
+
+int	ft_printf_pointer(size_t nb);
 #endif
