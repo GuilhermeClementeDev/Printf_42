@@ -23,7 +23,6 @@ hexadecimal values.
 ______________________________________________________________________________________
 
 Files Overview
-
     ft_printf.h: Header file containing function prototypes.
     ft_printf.c: Source code for the ft_printf function and its main logic.
     ft_printf_char.c: Source for char print.
@@ -40,9 +39,10 @@ This will generate the libftprintf.a static library. You can then link it with y
 project and use ft_printf as a drop-in replacement for the standard printf.
 ______________________________________________________________________________________
 
-Contact
+Contact 
 
 Feel free to reach out if you have any questions or suggestions:
 
-    Email: guilhermeclementedealmeida@gmail.com
-    LinkedIn: Guilherme Clemente de Almeida
+Email: guilhermeclementedealmeida@gmail.com
+
+LinkedIn: https://www.linkedin.com/in/guilherme-clemente-de-almeida-a637b9217/
