@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: guclemen <guclemen@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/18 07:20:53 by guclemen          #+#    #+#             */
+/*   Updated: 2024/10/18 07:20:54 by guclemen         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
-#include "libft/libft.h"
+# include "libft/libft.h"
 
 int	ft_printf(const char *s, ...);
 

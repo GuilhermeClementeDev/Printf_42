@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: guclemen <guclemen@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/18 07:19:48 by guclemen          #+#    #+#             */
+/*   Updated: 2024/10/18 07:19:50 by guclemen         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-static int	ft_verify(char c,va_list args)
+static int	ft_verify(char c, va_list args)
 {
 	int	size;
 
@@ -16,7 +28,7 @@ static int	ft_verify(char c,va_list args)
 		size = ft_printf_hex(va_arg(args, unsigned int), c);
 	if (c == '%')
 	{
-		ft_putchar_fd('%',1);
+		ft_putchar_fd('%', 1);
 		size = 1;
 	}
 	if (c == 'p')
@@ -35,12 +47,12 @@ static int	ft_write(const char *s, va_list args)
 	{
 		if (s[i] == '%')
 		{
-			size += ft_verify(s[i+1], args);
+			size += ft_verify(s[i + 1], args);
 			i += 2;
 		}
 		if (s[i] && s[i] != '%')
 		{
-			ft_putchar_fd(s[i],1);
+			ft_putchar_fd(s[i], 1);
 			size++;
 			i++;
 		}
@@ -50,10 +62,11 @@ static int	ft_write(const char *s, va_list args)
 
 int	ft_printf(const char *s, ...)
 {
-	int	size;
+	int		size;
+	va_list	args;
+
 	if (!ft_strchr(s, '%'))
 		return (ft_printf_string((char *)s));
-	va_list	args;
 	va_start(args, s);
 	size = ft_write(s, args);
 	va_end(args);

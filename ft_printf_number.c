@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf_number.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: guclemen <guclemen@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/18 07:20:35 by guclemen          #+#    #+#             */
+/*   Updated: 2024/10/18 07:20:36 by guclemen         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 static int	get_size(int nb)
@@ -19,10 +31,11 @@ static int	get_size(int nb)
 	}
 	return (count);
 }
+
 int	ft_printf_number(int nb)
 {
 	ft_putnbr_fd(nb, 1);
 	if (nb == 0)
-		return(1);
-	return(get_size(nb));
+		return (1);
+	return (get_size(nb));
 }

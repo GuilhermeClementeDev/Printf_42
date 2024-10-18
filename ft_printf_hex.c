@@ -1,8 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf_hex.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: guclemen <guclemen@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/18 07:21:46 by guclemen          #+#    #+#             */
+/*   Updated: 2024/10/18 07:21:48 by guclemen         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-static void	ft_rprint(char *s , int c)
+static void	ft_rprint(char *s, int c)
 {
 	int	i;
+
 	i = ft_strlen(s) - 1;
 	while (i >= 0)
 	{
@@ -17,13 +30,14 @@ static void	ft_rprint(char *s , int c)
 	}
 }
 
-int ft_printf_hex(unsigned int nb, int c)
+int	ft_printf_hex(unsigned int nb, int c)
 {
 	unsigned int	num;
-	char			*base = "0123456789abcdef";
+	char			*base;
 	char			arr[16];
 	int				i;
 
+	base = "0123456789abcdef";
 	i = 0;
 	if (nb == 0)
 	{
