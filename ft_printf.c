@@ -16,6 +16,7 @@ static int	ft_verify(char c, va_list args)
 {
 	int	size;
 
+	size = 0;
 	if (c == 'c')
 		size = ft_printf_char(va_arg(args, int));
 	if (c == 's')
@@ -65,6 +66,8 @@ int	ft_printf(const char *s, ...)
 	int		size;
 	va_list	args;
 
+	if (!s)
+		return (-1);
 	if (!ft_strchr(s, '%'))
 		return (ft_printf_string((char *)s));
 	va_start(args, s);
